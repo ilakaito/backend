@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="div">
+    <div class="row">
+        <div class="col">
+            <a href="/">
+                <- Kembali </a>
+                    <h2>Detail Mahasiswa</h2>
+                    <br>
+                    <img src="{{ mahasiswa['foto'] }}" alt="">
+                    {% if mahasiswa['nilai'] > 65 %}
+                    <p class="text-success">Lulus</p>
+                    {% else %}
+                    <p class="text-danger">Belum Lulus</p>
+                    {% endif %}
+                    <h5>{{ mahasiswa['nama'] }}</h5>
+                    <p> No. Hp : {{ mahasiswa['no_hp'] }} </p>
+                    <p> Email : {{ mahasiswa['email'] }} </p>
+                    
+                    <p> Alamat : {{ mahasiswa['alamat'] }} </p>
+                    
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
